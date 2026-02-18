@@ -1,0 +1,793 @@
+[
+  {
+    "id": "starry-night",
+    "title": "The Starry Night",
+    "artist": "Vincent van Gogh",
+    "year": 1889,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Starry%20Night.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Starry_Night",
+    "tags": ["post-impressionism", "night", "sky"],
+    "popularity": 98
+  },
+  {
+    "id": "mona-lisa",
+    "title": "Mona Lisa",
+    "artist": "Leonardo da Vinci",
+    "year": 1503,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mona%20Lisa.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Mona_Lisa",
+    "tags": ["renaissance", "portrait"],
+    "popularity": 95
+  },
+  {
+    "id": "girl-pearl",
+    "title": "Girl with a Pearl Earring",
+    "artist": "Johannes Vermeer",
+    "year": 1665,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Meisje%20met%20de%20parel.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring",
+    "tags": ["dutch-golden-age", "portrait"],
+    "popularity": 89
+  },
+  {
+    "id": "great-wave",
+    "title": "The Great Wave off Kanagawa",
+    "artist": "Hokusai",
+    "year": 1831,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Great%20Wave%20off%20Kanagawa2.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa",
+    "tags": ["ukiyo-e", "wave"],
+    "popularity": 92
+  },
+
+  {
+    "id": "night-watch",
+    "title": "The Night Watch",
+    "artist": "Rembrandt",
+    "year": 1642,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Night%20Watch%20-%20HD.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Night_Watch",
+    "tags": ["baroque", "dutch-golden-age"],
+    "popularity": 93
+  },
+  {
+    "id": "guernica",
+    "title": "Guernica",
+    "artist": "Pablo Picasso",
+    "year": 1937,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/PicassoGuernica.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Guernica_(Picasso)",
+    "tags": ["cubism", "war"],
+    "popularity": 94
+  },
+  {
+    "id": "the-scream",
+    "title": "The Scream",
+    "artist": "Edvard Munch",
+    "year": 1893,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Scream.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Scream",
+    "tags": ["expressionism", "anxiety"],
+    "popularity": 94
+  },
+  {
+    "id": "persistence-of-memory",
+    "title": "The Persistence of Memory",
+    "artist": "Salvador Dalí",
+    "year": 1931,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Persistence%20of%20Memory.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Persistence_of_Memory",
+    "tags": ["surrealism", "time"],
+    "popularity": 90
+  },
+  {
+    "id": "birth-of-venus",
+    "title": "The Birth of Venus",
+    "artist": "Sandro Botticelli",
+    "year": 1486,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Sandro%20Botticelli%20-%20La%20nascita%20di%20Venere%20-%20Google%20Art%20Project%20-%20edited.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Birth_of_Venus",
+    "tags": ["renaissance", "mythology"],
+    "popularity": 91
+  },
+  {
+    "id": "creation-of-adam",
+    "title": "The Creation of Adam",
+    "artist": "Michelangelo",
+    "year": 1512,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20-%20Creation%20of%20Adam%20(cropped).jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Creation_of_Adam",
+    "tags": ["renaissance", "fresco"],
+    "popularity": 92
+  },
+  {
+    "id": "last-supper",
+    "title": "The Last Supper",
+    "artist": "Leonardo da Vinci",
+    "year": 1498,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20(1452-1519)%20-%20The%20Last%20Supper%20(1495-1498).jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)",
+    "tags": ["renaissance", "religion"],
+    "popularity": 93
+  },
+  {
+    "id": "school-of-athens",
+    "title": "The School of Athens",
+    "artist": "Raphael",
+    "year": 1511,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Raphael_School_of_Athens.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_School_of_Athens",
+    "tags": ["renaissance", "philosophy"],
+    "popularity": 88
+  },
+  {
+    "id": "las-meninas",
+    "title": "Las Meninas",
+    "artist": "Diego Velázquez",
+    "year": 1656,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Las_Meninas_01.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Las_Meninas",
+    "tags": ["baroque", "court"],
+    "popularity": 86
+  },
+  {
+    "id": "garden-of-earthly-delights",
+    "title": "The Garden of Earthly Delights",
+    "artist": "Hieronymus Bosch",
+    "year": 1515,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/El_jard%C3%ADn_de_las_Delicias%2C_de_El_Bosco.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Garden_of_Earthly_Delights",
+    "tags": ["northern-renaissance", "triptych"],
+    "popularity": 87
+  },
+  {
+    "id": "american-gothic",
+    "title": "American Gothic",
+    "artist": "Grant Wood",
+    "year": 1930,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/American_Gothic",
+    "tags": ["regionalism", "portrait"],
+    "popularity": 84
+  },
+  {
+    "id": "the-kiss-klimt",
+    "title": "The Kiss",
+    "artist": "Gustav Klimt",
+    "year": 1908,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gustav_Klimt_016.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Kiss_(Klimt)",
+    "tags": ["symbolism", "art-nouveau"],
+    "popularity": 90
+  },
+  {
+    "id": "water-lilies",
+    "title": "Water Lilies",
+    "artist": "Claude Monet",
+    "year": 1916,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Claude_Monet_-_Nymph%C3%A9as_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Water_Lilies_(Monet_series)",
+    "tags": ["impressionism", "nature"],
+    "popularity": 88
+  },
+  {
+    "id": "impression-sunrise",
+    "title": "Impression, Sunrise",
+    "artist": "Claude Monet",
+    "year": 1872,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Claude_Monet%2C_Impression%2C_soleil_levant.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Impression,_Sunrise",
+    "tags": ["impressionism", "harbor"],
+    "popularity": 86
+  },
+  {
+    "id": "cafe-terrace-night",
+    "title": "Café Terrace at Night",
+    "artist": "Vincent van Gogh",
+    "year": 1888,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Cafe_Terrace_at_Night_(Yorck).jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Caf%C3%A9_Terrace_at_Night",
+    "tags": ["post-impressionism", "night"],
+    "popularity": 87
+  },
+  {
+    "id": "sunflowers",
+    "title": "Sunflowers",
+    "artist": "Vincent van Gogh",
+    "year": 1888,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Sunflowers_-_VGM_F458.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sunflowers_(Van_Gogh_series)",
+    "tags": ["post-impressionism", "still-life"],
+    "popularity": 86
+  },
+  {
+    "id": "wheatfield-crows",
+    "title": "Wheatfield with Crows",
+    "artist": "Vincent van Gogh",
+    "year": 1890,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Wheatfield_with_crows_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Wheatfield_with_Crows",
+    "tags": ["post-impressionism", "landscape"],
+    "popularity": 82
+  },
+  {
+    "id": "whistlers-mother",
+    "title": "Whistler's Mother",
+    "artist": "James McNeill Whistler",
+    "year": 1871,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Whistlers_Mother_high_res.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Whistler%27s_Mother",
+    "tags": ["portrait", "realism"],
+    "popularity": 80
+  },
+  {
+    "id": "the-hay-wain",
+    "title": "The Hay Wain",
+    "artist": "John Constable",
+    "year": 1821,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Constable_-_The_Hay_Wain_(1821).jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Hay_Wain",
+    "tags": ["romanticism", "landscape"],
+    "popularity": 78
+  },
+  {
+    "id": "wanderer-sea-fog",
+    "title": "Wanderer above the Sea of Fog",
+    "artist": "Caspar David Friedrich",
+    "year": 1818,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_Wanderer_above_the_Sea_of_Fog.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Wanderer_above_the_Sea_of_Fog",
+    "tags": ["romanticism", "landscape"],
+    "popularity": 85
+  },
+  {
+    "id": "liberty-leading-people",
+    "title": "Liberty Leading the People",
+    "artist": "Eugène Delacroix",
+    "year": 1830,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Eug%C3%A8ne_Delacroix_-_La_Libert%C3%A9_guidant_le_peuple.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Liberty_Leading_the_People",
+    "tags": ["romanticism", "revolution"],
+    "popularity": 84
+  },
+  {
+    "id": "raft-of-medusa",
+    "title": "The Raft of the Medusa",
+    "artist": "Théodore Géricault",
+    "year": 1819,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_Le_Radeau_de_la_M%C3%A9duse.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Raft_of_the_Medusa",
+    "tags": ["romanticism", "tragedy"],
+    "popularity": 82
+  },
+  {
+    "id": "a-sunday-afternoon",
+    "title": "A Sunday Afternoon on the Island of La Grande Jatte",
+    "artist": "Georges Seurat",
+    "year": 1886,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_-_1884_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/A_Sunday_Afternoon_on_the_Island_of_La_Grande_Jatte",
+    "tags": ["pointillism", "post-impressionism"],
+    "popularity": 83
+  },
+  {
+    "id": "bal-du-moulin",
+    "title": "Bal du moulin de la Galette",
+    "artist": "Pierre-Auguste Renoir",
+    "year": 1876,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pierre-Auguste_Renoir%2C_Le_Moulin_de_la_Galette.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Bal_du_moulin_de_la_Galette",
+    "tags": ["impressionism", "social"],
+    "popularity": 81
+  },
+  {
+    "id": "luncheon-boating-party",
+    "title": "Luncheon of the Boating Party",
+    "artist": "Pierre-Auguste Renoir",
+    "year": 1881,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pierre-Auguste_Renoir%2C_Luncheon_of_the_Boating_Party.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Luncheon_of_the_Boating_Party",
+    "tags": ["impressionism", "social"],
+    "popularity": 80
+  },
+  {
+    "id": "olympia-manet",
+    "title": "Olympia",
+    "artist": "Édouard Manet",
+    "year": 1863,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/%C3%89douard_Manet_-_Olympia_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Olympia_(Manet)",
+    "tags": ["realism", "modernism"],
+    "popularity": 79
+  },
+  {
+    "id": "bar-folies-bergere",
+    "title": "A Bar at the Folies-Bergère",
+    "artist": "Édouard Manet",
+    "year": 1882,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Edouard_Manet_-_A_Bar_at_the_Folies-Berg%C3%A8re.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/A_Bar_at_the_Folies-Berg%C3%A8re",
+    "tags": ["modernism", "city"],
+    "popularity": 78
+  },
+  {
+    "id": "the-gleaners",
+    "title": "The Gleaners",
+    "artist": "Jean-François Millet",
+    "year": 1857,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project_2.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Gleaners",
+    "tags": ["realism", "rural"],
+    "popularity": 76
+  },
+  {
+    "id": "napoleon-crossing-alps",
+    "title": "Napoleon Crossing the Alps",
+    "artist": "Jacques-Louis David",
+    "year": 1801,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jacques-Louis_David_-_Napoleon_Crossing_the_Alps_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Napoleon_Crossing_the_Alps",
+    "tags": ["neoclassicism", "history"],
+    "popularity": 77
+  },
+  {
+    "id": "oath-horatii",
+    "title": "Oath of the Horatii",
+    "artist": "Jacques-Louis David",
+    "year": 1784,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jacques-Louis_David_-_Oath_of_the_Horatii_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Oath_of_the_Horatii",
+    "tags": ["neoclassicism", "history"],
+    "popularity": 75
+  },
+  {
+    "id": "the-thinker-rodin",
+    "title": "The Thinker (study painting)",
+    "artist": "Auguste Rodin (attributed study)",
+    "year": 1900,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Le_Penseur_de_Rodin.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Thinker",
+    "tags": ["study", "figure"],
+    "popularity": 60
+  },
+  {
+    "id": "arnolfini-portrait",
+    "title": "Arnolfini Portrait",
+    "artist": "Jan van Eyck",
+    "year": 1434,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Van_Eyck_-_Arnolfini_Portrait.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Arnolfini_Portrait",
+    "tags": ["northern-renaissance", "portrait"],
+    "popularity": 82
+  },
+  {
+    "id": "the-milkmaid",
+    "title": "The Milkmaid",
+    "artist": "Johannes Vermeer",
+    "year": 1658,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Milkmaid_(painting)",
+    "tags": ["dutch-golden-age", "genre"],
+    "popularity": 81
+  },
+  {
+    "id": "tower-of-babel",
+    "title": "The Tower of Babel",
+    "artist": "Pieter Bruegel the Elder",
+    "year": 1563,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Tower_of_Babel_(Bruegel)",
+    "tags": ["northern-renaissance", "biblical"],
+    "popularity": 79
+  },
+  {
+    "id": "hunters-in-snow",
+    "title": "The Hunters in the Snow",
+    "artist": "Pieter Bruegel the Elder",
+    "year": 1565,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Hunters_in_the_Snow",
+    "tags": ["northern-renaissance", "winter"],
+    "popularity": 78
+  },
+  {
+    "id": "the-swing",
+    "title": "The Swing",
+    "artist": "Jean-Honoré Fragonard",
+    "year": 1767,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Fragonard%20-%20The%20Swing.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Swing_(Fragonard)",
+    "tags": ["rococo", "playful"],
+    "popularity": 77
+  },
+  {
+    "id": "haystacks-monet",
+    "title": "Haystacks",
+    "artist": "Claude Monet",
+    "year": 1891,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Claude_Monet_-_Meules_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Haystacks_(Monet)",
+    "tags": ["impressionism", "series"],
+    "popularity": 74
+  },
+  {
+    "id": "the-card-players",
+    "title": "The Card Players",
+    "artist": "Paul Cézanne",
+    "year": 1895,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Paul_C%C3%A9zanne_-_The_Card_Players_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Card_Players",
+    "tags": ["post-impressionism", "genre"],
+    "popularity": 78
+  },
+  {
+    "id": "mont-sainte-victoire",
+    "title": "Mont Sainte-Victoire",
+    "artist": "Paul Cézanne",
+    "year": 1904,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Paul_C%C3%A9zanne_-_Mont_Sainte-Victoire_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Mont_Sainte-Victoire_(C%C3%A9zanne)",
+    "tags": ["post-impressionism", "landscape"],
+    "popularity": 72
+  },
+  {
+    "id": "no-5-pollock",
+    "title": "No. 5, 1948",
+    "artist": "Jackson Pollock",
+    "year": 1948,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jackson_Pollock_Number_5_1948.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/No._5,_1948",
+    "tags": ["abstract-expressionism", "drip"],
+    "popularity": 76
+  },
+  {
+    "id": "campbell-soup",
+    "title": "Campbell's Soup Cans",
+    "artist": "Andy Warhol",
+    "year": 1962,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Warhol-Campbell_Soup-1.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Campbell%27s_Soup_Cans",
+    "tags": ["pop-art", "consumer"],
+    "popularity": 74
+  },
+  {
+    "id": "nighthawks",
+    "title": "Nighthawks",
+    "artist": "Edward Hopper",
+    "year": 1942,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nighthawks_by_Edward_Hopper_1942.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Nighthawks",
+    "tags": ["realism", "city"],
+    "popularity": 86
+  },
+  {
+    "id": "the-son-of-man",
+    "title": "The Son of Man",
+    "artist": "René Magritte",
+    "year": 1964,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Magritte_The_Son_of_Man.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Son_of_Man",
+    "tags": ["surrealism", "portrait"],
+    "popularity": 82
+  },
+  {
+    "id": "the-treachery-of-images",
+    "title": "The Treachery of Images",
+    "artist": "René Magritte",
+    "year": 1929,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/La_trahison_des_images.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Treachery_of_Images",
+    "tags": ["surrealism", "concept"],
+    "popularity": 80
+  },
+  {
+    "id": "christinas-world",
+    "title": "Christina's World",
+    "artist": "Andrew Wyeth",
+    "year": 1948,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Christinas_world.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Christina%27s_World",
+    "tags": ["realism", "landscape"],
+    "popularity": 79
+  },
+  {
+    "id": "ophelia-millais",
+    "title": "Ophelia",
+    "artist": "John Everett Millais",
+    "year": 1852,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Everett_Millais_-_Ophelia_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Ophelia_(painting)",
+    "tags": ["pre-raphaelite", "literature"],
+    "popularity": 78
+  },
+  {
+    "id": "the-fighting-temeraire",
+    "title": "The Fighting Temeraire",
+    "artist": "J. M. W. Turner",
+    "year": 1839,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/J._M._W._Turner_-_The_Fighting_Temeraire.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Fighting_Temeraire",
+    "tags": ["romanticism", "sea"],
+    "popularity": 77
+  },
+  {
+    "id": "the-sleeping-gypsy",
+    "title": "The Sleeping Gypsy",
+    "artist": "Henri Rousseau",
+    "year": 1897,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Henri_Rousseau_-_The_Sleeping_Gypsy.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Sleeping_Gypsy",
+    "tags": ["naive-art", "surreal"],
+    "popularity": 76
+  },
+  {
+    "id": "the-storm-sea-of-galilee",
+    "title": "The Storm on the Sea of Galilee",
+    "artist": "Rembrandt",
+    "year": 1633,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Christ_in_the_Storm_on_the_Lake_of_Galilee.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Storm_on_the_Sea_of_Galilee",
+    "tags": ["baroque", "sea"],
+    "popularity": 75
+  },
+  {
+    "id": "the-anatomy-lesson",
+    "title": "The Anatomy Lesson of Dr. Nicolaes Tulp",
+    "artist": "Rembrandt",
+    "year": 1632,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp",
+    "tags": ["baroque", "group-portrait"],
+    "popularity": 77
+  },
+  {
+    "id": "the-embarkation-for-cythera",
+    "title": "The Embarkation for Cythera",
+    "artist": "Antoine Watteau",
+    "year": 1717,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Antoine_Watteau_-_Pilgrimage_to_Cythera_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Embarkation_for_Cythera",
+    "tags": ["rococo", "mythology"],
+    "popularity": 70
+  },
+  {
+    "id": "the-ambassadors",
+    "title": "The Ambassadors",
+    "artist": "Hans Holbein the Younger",
+    "year": 1533,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Ambassadors_(Holbein)",
+    "tags": ["renaissance", "symbolism"],
+    "popularity": 73
+  },
+  {
+    "id": "the-third-of-may-1808",
+    "title": "The Third of May 1808",
+    "artist": "Francisco Goya",
+    "year": 1814,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_in_Google_Earth.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Third_of_May_1808",
+    "tags": ["romanticism", "war"],
+    "popularity": 79
+  },
+  {
+    "id": "saturn-devouring-son",
+    "title": "Saturn Devouring His Son",
+    "artist": "Francisco Goya",
+    "year": 1823,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Francisco_de_Goya%2C_Saturno_devorando_a_su_hijo_(1820-1823).jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Saturn_Devouring_His_Son",
+    "tags": ["black-paintings", "mythology"],
+    "popularity": 76
+  },
+  {
+    "id": "the-dream-picasso",
+    "title": "Le Rêve",
+    "artist": "Pablo Picasso",
+    "year": 1932,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Le_R%C3%AAve_(Picasso).jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Le_R%C3%AAve",
+    "tags": ["modernism", "portrait"],
+    "popularity": 75
+  },
+  {
+    "id": "les-demoiselles",
+    "title": "Les Demoiselles d'Avignon",
+    "artist": "Pablo Picasso",
+    "year": 1907,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Les_Demoiselles_d%27Avignon.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Les_Demoiselles_d%27Avignon",
+    "tags": ["cubism", "modernism"],
+    "popularity": 83
+  },
+  {
+    "id": "black-square",
+    "title": "Black Square",
+    "artist": "Kazimir Malevich",
+    "year": 1915,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Black_Square%20%28Malevich%29.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Black_Square_(painting)",
+    "tags": ["suprematism", "abstract"],
+    "popularity": 70
+  },
+  {
+    "id": "composition-viii",
+    "title": "Composition VIII",
+    "artist": "Wassily Kandinsky",
+    "year": 1923,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Wassily_Kandinsky%2C_1923_-_Composition_8.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Composition_VIII",
+    "tags": ["abstract", "bauhaus"],
+    "popularity": 71
+  },
+  {
+    "id": "broadway-boogie-woogie",
+    "title": "Broadway Boogie Woogie",
+    "artist": "Piet Mondrian",
+    "year": 1943,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Piet_Mondriaan_-_Broadway_Boogie_Woogie.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Broadway_Boogie_Woogie",
+    "tags": ["de-stijl", "abstract"],
+    "popularity": 72
+  },
+  {
+    "id": "the-sleep",
+    "title": "The Sleep",
+    "artist": "Gustav Klimt",
+    "year": 1910,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gustav_Klimt_-_Die_Jungfrau.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Gustav_Klimt",
+    "tags": ["symbolism", "art-nouveau"],
+    "popularity": 62
+  },
+  {
+    "id": "the-bathers-cezanne",
+    "title": "The Bathers",
+    "artist": "Paul Cézanne",
+    "year": 1906,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Paul_C%C3%A9zanne_-_Les_Grandes_Baigneuses_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Bathers_(C%C3%A9zanne)",
+    "tags": ["post-impressionism", "figure"],
+    "popularity": 70
+  },
+  {
+    "id": "aivazovsky-ninth-wave",
+    "title": "The Ninth Wave",
+    "artist": "Ivan Aivazovsky",
+    "year": 1850,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Ninth_Wave.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Ninth_Wave",
+    "tags": ["romanticism", "sea"],
+    "popularity": 73
+  },
+  {
+    "id": "the-lady-of-shalott",
+    "title": "The Lady of Shalott",
+    "artist": "John William Waterhouse",
+    "year": 1888,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/John_William_Waterhouse_-_The_Lady_of_Shalott_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Lady_of_Shalott_(painting)",
+    "tags": ["pre-raphaelite", "literature"],
+    "popularity": 76
+  },
+  {
+    "id": "the-great-bath",
+    "title": "The Great Bathers",
+    "artist": "Pierre-Auguste Renoir",
+    "year": 1887,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pierre-Auguste_Renoir_-_Les_Grandes_Baigneuses.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Large_Bathers",
+    "tags": ["impressionism", "figure"],
+    "popularity": 68
+  },
+  {
+    "id": "the-starry-night-over-rhone",
+    "title": "Starry Night Over the Rhône",
+    "artist": "Vincent van Gogh",
+    "year": 1888,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Starry_Night_Over_the_Rh%C3%B4ne",
+    "tags": ["post-impressionism", "night"],
+    "popularity": 80
+  },
+  {
+    "id": "irises",
+    "title": "Irises",
+    "artist": "Vincent van Gogh",
+    "year": 1889,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Irises_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Irises_(painting)",
+    "tags": ["post-impressionism", "flowers"],
+    "popularity": 79
+  },
+  {
+    "id": "the-red-vineyard",
+    "title": "The Red Vineyard",
+    "artist": "Vincent van Gogh",
+    "year": 1888,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_The_Red_Vineyard_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Red_Vineyard",
+    "tags": ["post-impressionism", "landscape"],
+    "popularity": 74
+  },
+  {
+    "id": "the-farmhouse-provence",
+    "title": "The Langlois Bridge at Arles",
+    "artist": "Vincent van Gogh",
+    "year": 1888,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Langlois_Bridge_at_Arles_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Langlois_Bridge_at_Arles",
+    "tags": ["post-impressionism", "bridge"],
+    "popularity": 68
+  },
+  {
+    "id": "the-sleeping-venus",
+    "title": "Sleeping Venus",
+    "artist": "Giorgione",
+    "year": 1510,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione_-_Sleeping_Venus_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sleeping_Venus_(Giorgione)",
+    "tags": ["renaissance", "mythology"],
+    "popularity": 71
+  },
+  {
+    "id": "the-uga-gauguin",
+    "title": "Where Do We Come From? What Are We? Where Are We Going?",
+    "artist": "Paul Gauguin",
+    "year": 1897,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Paul_Gauguin_-_D%27ou_venons-nous_Que_sommes-nous_O%C3%B9_allons-nous_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Where_Do_We_Come_From%3F_What_Are_We%3F_Where_Are_We_Going%3F",
+    "tags": ["post-impressionism", "symbolism"],
+    "popularity": 73
+  },
+  {
+    "id": "self-portrait-frida",
+    "title": "Self-Portrait with Thorn Necklace and Hummingbird",
+    "artist": "Frida Kahlo",
+    "year": 1940,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Frida_Kahlo_(self_portrait).jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Self-Portrait_with_Thorn_Necklace_and_Hummingbird",
+    "tags": ["surrealism", "portrait"],
+    "popularity": 78
+  },
+  {
+    "id": "the-two-fridas",
+    "title": "The Two Fridas",
+    "artist": "Frida Kahlo",
+    "year": 1939,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Two_Fridas.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Two_Fridas",
+    "tags": ["surrealism", "portrait"],
+    "popularity": 77
+  },
+  {
+    "id": "the-lovers-magritte",
+    "title": "The Lovers",
+    "artist": "René Magritte",
+    "year": 1928,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rene_Magritte_The_Lovers.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Lovers_(Magritte)",
+    "tags": ["surrealism", "love"],
+    "popularity": 74
+  },
+  {
+    "id": "carnations-lilies",
+    "title": "Carnation, Lily, Lily, Rose",
+    "artist": "John Singer Sargent",
+    "year": 1886,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Singer_Sargent_-_Carnation%2C_Lily%2C_Lily%2C_Rose_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Carnation,_Lily,_Lily,_Rose",
+    "tags": ["impressionism", "garden"],
+    "popularity": 68
+  },
+  {
+    "id": "the-birth-of-venus-cabanel",
+    "title": "The Birth of Venus",
+    "artist": "Alexandre Cabanel",
+    "year": 1863,
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Alexandre_Cabanel_-_The_Birth_of_Venus_-_Google_Art_Project.jpg",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Birth_of_Venus_(Cabanel)",
+    "tags": ["academic-art", "mythology"],
+    "popularity": 69
+  }
+]
