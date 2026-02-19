@@ -1,6 +1,4 @@
-// ==============================
-// DOM refs
-// ==============================
+
 const grid = document.getElementById("grid");
 const empty = document.getElementById("empty");
 
