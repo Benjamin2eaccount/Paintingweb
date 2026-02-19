@@ -1,25 +1,26 @@
-
+// ==============================
+// DOM refs yey 
+// ==============================
 const grid = document.getElementById("grid");
 const empty = document.getElementById("empty");
 
 const qInput = document.getElementById("q");
 const clearBtn = document.getElementById("clear");
-
 const onlyFavCheckbox = document.getElementById("onlyFav");
 
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modalTitle");
 const modalSub = document.getElementById("modalSub");
 const modalImg = document.getElementById("modalImg");
-
 const metaYear = document.getElementById("metaYear");
 const metaLink = document.getElementById("metaLink");
 const metaTags = document.getElementById("metaTags");
-
-const modalPalette = document.getElementById("modalPalette");
+const modalPalette = document.getElementById("modalPalette"); // ok als leeg
 const favBtn = document.getElementById("favBtn");
 
-// Sort buttons
+const themeBtn = document.getElementById("themeToggle");
+const hiContrastCheckbox = document.getElementById("hiContrast");
+
 const sortBtns = Array.from(document.querySelectorAll(".seg-btn"));
 
 // ==============================
@@ -27,11 +28,10 @@ const sortBtns = Array.from(document.querySelectorAll(".seg-btn"));
 // ==============================
 let data = [];
 let filtered = [];
-let activeSort = "trending";
-
-// favorites by id
-let favorites = new Set(JSON.parse(localStorage.getItem("favorites") || "[]"));
 let currentItem = null;
+
+let favorites = new Set(JSON.parse(localStorage.getItem("favorites") || "[]"));
+let activeSort = "trending";
 
 // ==============================
 // Helpers
@@ -41,18 +41,17 @@ function safeText(v, fallback = "—") {
 }
 
 function safeHref(v) {
-  if (!v) return "#";
-  if (typeof v !== "string") return "#";
+  if (!v || typeof v !== "string") return "#";
   if (v.startsWith("http://") || v.startsWith("https://")) return v;
-  return "https://" + v; // fallback
-}
-
-function isFav(id) {
-  return favorites.has(id);
+  return "https://" + v;
 }
 
 function saveFavs() {
   localStorage.setItem("favorites", JSON.stringify(Array.from(favorites)));
+}
+
+function isFav(id) {
+  return favorites.has(id);
 }
 
 function updateFavBtn() {
@@ -60,11 +59,61 @@ function updateFavBtn() {
   favBtn.textContent = isFav(currentItem.id) ? "★" : "☆";
 }
 
+function toggleFavorite(id) {
+  if (!id) return;
+  if (favorites.has(id)) favorites.delete(id);
+  else favorites.add(id);
+  saveFavs();
+  updateFavBtn();
+  if (onlyFavCheckbox.checked) applyFilters();
+}
+
+// ==============================
+// Theme + Contrast
+// ==============================
+function applyTheme(theme) {
+  // verwacht: "dark" of "light"
+  document.documentElement.dataset.theme = theme;
+  localStorage.setItem("theme", theme);
+
+  if (themeBtn) {
+    themeBtn.textContent = theme === "dark" ? "🌙 Dark" : "☀️ Light";
+  }
+}
+
+function initTheme() {
+  const saved = localStorage.getItem("theme");
+  applyTheme(saved || "dark");
+}
+
+function applyContrast(on) {
+  document.documentElement.classList.toggle("hi-contrast", !!on);
+  localStorage.setItem("hi_contrast", on ? "1" : "0");
+}
+
+function initContrast() {
+  const saved = localStorage.getItem("hi_contrast") === "1";
+  if (hiContrastCheckbox) hiContrastCheckbox.checked = saved;
+  applyContrast(saved);
+}
+
+if (themeBtn) {
+  themeBtn.addEventListener("click", () => {
+    const current = document.documentElement.dataset.theme || "dark";
+    applyTheme(current === "dark" ? "light" : "dark");
+  });
+}
+
+if (hiContrastCheckbox) {
+  hiContrastCheckbox.addEventListener("change", () => {
+    applyContrast(hiContrastCheckbox.checked);
+  });
+}
+
 // ==============================
 // Data load (GitHub Pages safe)
 // ==============================
 async function loadData() {
-  // jouw bestand: /data/paintings.json
   const url = new URL("./data/paintings.json", import.meta.url);
   const res = await fetch(url);
   if (!res.ok) throw new Error(`HTTP ${res.status} bij ${res.url}`);
@@ -74,29 +123,6 @@ async function loadData() {
 // ==============================
 // Filtering + sorting
 // ==============================
-function applyFilters() {
-  const term = qInput.value.trim().toLowerCase();
-
-  filtered = data.filter((item) => {
-    const haystack = [
-      item.title,
-      item.artist,
-      (item.tags || []).join(" ")
-    ]
-      .filter(Boolean)
-      .join(" ")
-      .toLowerCase();
-
-    const matchSearch = !term || haystack.includes(term);
-    const matchFav = !onlyFavCheckbox.checked || isFav(item.id);
-
-    return matchSearch && matchFav;
-  });
-
-  applySort();
-  render();
-}
-
 function applySort() {
   const arr = filtered;
 
@@ -109,6 +135,26 @@ function applySort() {
   } else if (activeSort === "artist") {
     arr.sort((a, b) => safeText(a.artist, "").localeCompare(safeText(b.artist, ""), "nl"));
   }
+}
+
+function applyFilters() {
+  const term = qInput.value.trim().toLowerCase();
+
+  filtered = data.filter((item) => {
+    const hay = [
+      item.title,
+      item.artist,
+      (item.tags || []).join(" ")
+    ].filter(Boolean).join(" ").toLowerCase();
+
+    const matchSearch = !term || hay.includes(term);
+    const matchFav = !onlyFavCheckbox.checked || isFav(item.id);
+
+    return matchSearch && matchFav;
+  });
+
+  applySort();
+  render();
 }
 
 // ==============================
@@ -127,12 +173,10 @@ function render() {
     const card = document.createElement("button");
     card.type = "button";
     card.className = "card";
-    card.setAttribute("aria-label", `${safeText(item.title)} — ${safeText(item.artist, "")}`);
 
-    // let op: jouw JSON heeft imageUrl
-    const imgSrc = item.imageUrl || "";
     const title = safeText(item.title);
     const artist = safeText(item.artist, "");
+    const imgSrc = item.imageUrl || "";
 
     card.innerHTML = `
       <img src="${imgSrc}" alt="${title}" loading="lazy" />
@@ -151,15 +195,15 @@ function render() {
 // Modal
 // ==============================
 function renderPalette(colors) {
+  // jouw data heeft meestal geen palette → leeg is prima
   modalPalette.innerHTML = "";
-  // jouw JSON heeft geen palette; we laten dit gewoon leeg
-  if (!Array.isArray(colors) || colors.length === 0) return;
+  if (!Array.isArray(colors) || !colors.length) return;
 
   for (const c of colors) {
-    const swatch = document.createElement("div");
-    swatch.className = "swatch";
-    swatch.style.background = c;
-    modalPalette.appendChild(swatch);
+    const sw = document.createElement("div");
+    sw.className = "swatch";
+    sw.style.background = c;
+    modalPalette.appendChild(sw);
   }
 }
 
@@ -175,11 +219,10 @@ function openModal(item) {
   metaYear.textContent = safeText(item.year);
   metaTags.textContent = Array.isArray(item.tags) && item.tags.length ? item.tags.join(", ") : "—";
 
-  // jouw JSON heeft sourceUrl
   metaLink.href = safeHref(item.sourceUrl);
   metaLink.textContent = metaLink.href === "#" ? "—" : "open";
 
-  renderPalette(item.palette); // meestal leeg bij jou
+  renderPalette(item.palette);
   updateFavBtn();
 
   modal.classList.remove("hidden");
@@ -190,7 +233,7 @@ function closeModal() {
   currentItem = null;
 }
 
-// backdrop + close buttons
+// close buttons/backdrop
 document.addEventListener("click", (e) => {
   const el = e.target;
   if (el && el.hasAttribute("data-close")) closeModal();
@@ -198,21 +241,10 @@ document.addEventListener("click", (e) => {
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeModal();
-  if (e.key.toLowerCase() === "f" && currentItem) {
-    toggleFavorite(currentItem.id);
-  }
+  if (e.key.toLowerCase() === "f" && currentItem) toggleFavorite(currentItem.id);
 });
 
 // favorite button
-function toggleFavorite(id) {
-  if (favorites.has(id)) favorites.delete(id);
-  else favorites.add(id);
-  saveFavs();
-  updateFavBtn();
-  // her-render als "Alleen favorieten" aan staat
-  if (onlyFavCheckbox.checked) applyFilters();
-}
-
 if (favBtn) {
   favBtn.addEventListener("click", () => {
     if (!currentItem) return;
@@ -232,7 +264,6 @@ clearBtn.addEventListener("click", () => {
 
 onlyFavCheckbox.addEventListener("change", applyFilters);
 
-// sort buttons
 sortBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     sortBtns.forEach((b) => b.classList.remove("is-active"));
@@ -247,9 +278,10 @@ sortBtns.forEach((btn) => {
 // ==============================
 (async function init() {
   try {
-    data = await loadData();
+    initTheme();
+    initContrast();
 
-    // basis-validatie: zorg dat elk item een id heeft
+    data = await loadData();
     data = Array.isArray(data) ? data.filter((x) => x && x.id) : [];
 
     filtered = [...data];
