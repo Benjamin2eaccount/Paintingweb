@@ -432,3 +432,7 @@ body.hicontrast{
     --muted:#b2b8c8;
     --border: rgba(255,255,255,.16);
 }
+
+body:not(.dark) .topbar{
+  background: rgba(246,247,251,.78);
+}
