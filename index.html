@@ -2,139 +2,142 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Schilderij Palette</title>
-  <link rel="stylesheet" href="src/style.css"/>
-  <meta name="color-scheme" content="dark light"/>
+
+  <!-- CSS in de root -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <meta name="color-scheme" content="dark light" />
+
   <style>
-    /* Alleen HTML gevraagd: export UI volledig weg */
-    .layout{ grid-template-columns: 1fr !important; }
-    .sidebar{ display:none !important; }
-    .export-hidden{ display:none !important; }
+    /* Export UI weg */
+    .layout { grid-template-columns: 1fr !important; }
+    .sidebar { display: none !important; }
+    .export-hidden { display: none !important; }
   </style>
 </head>
+
 <body>
-<header class="topbar">
-  <div class="brand">
-    <div class="logo" aria-hidden="true"></div>
-    <div>
-      <div class="brand-title">Schilderij Palette</div>
-      <div class="brand-sub">Klik een kaart voor details en palette.</div>
-    </div>
-  </div>
-
-  <div class="controls">
-    <div class="search">
-      <input id="q" type="search" placeholder="Zoek op titel, kunstenaar, tags…" autocomplete="off"/>
-      <button id="clear" class="btn btn-ghost" title="Leegmaken">✕</button>
-      <button id="themeToggle" class="btn btn-ghost" title="Toggle theme">☀️ Light</button>
-
-    </div>
-
-    <div class="seg">
-      <button class="seg-btn is-active" data-sort="trending">Trending</button>
-      <button class="seg-btn" data-sort="newest">Nieuw</button>
-      <button class="seg-btn" data-sort="title">Titel</button>
-      <button class="seg-btn" data-sort="artist">Kunstenaar</button>
-    </div>
-
-    <div class="filters">
-      <label class="chk">
-        <input id="onlyFav" type="checkbox"/>
-        <span>Alleen favorieten</span>
-      </label>
-      <label class="chk">
-        <input id="hiContrast" type="checkbox"/>
-        <span>High contrast</span>
-      </label>
-    </div>
-  </div>
-</header>
-
-<main class="layout">
-  <!-- Sidebar weggehaald. We houden alleen de stats-ids nog "verstopt" voor JS compat -->
-  <aside class="sidebar">
-    <div class="panel">
-      <div class="panel-title">Stats</div>
-      <div class="panel-body">
-        <div class="stat">
-          <div class="stat-k">Kaarten</div>
-          <div class="stat-v" id="statCount">—</div>
-        </div>
-        <div class="stat">
-          <div class="stat-k">Favorieten</div>
-          <div class="stat-v" id="statFav">—</div>
-        </div>
-        <div class="stat">
-          <div class="stat-k">Laatste</div>
-          <div class="stat-v" id="statLast">—</div>
-        </div>
-
-        <!-- Export knoppen blijven bestaan maar zijn onzichtbaar, zodat main.js niet crasht -->
-        <button id="exportCssAll" class="export-hidden">Export CSS</button>
-        <button id="exportJsonAll" class="export-hidden">Export JSON</button>
-      </div>
-    </div>
-  </aside>
-
-  <section class="content">
-    <div id="grid" class="grid" aria-live="polite"></div>
-    <div id="empty" class="empty hidden">
-      <div class="empty-title">Geen resultaten</div>
-      <div class="empty-sub">Pas je zoekterm of filters aan.</div>
-    </div>
-  </section>
-</main>
-
-<!-- Modal -->
-<div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div class="modal-backdrop" data-close></div>
-  <div class="modal-card">
-    <div class="modal-head">
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
       <div>
-        <div id="modalTitle" class="modal-title">—</div>
-        <div id="modalSub" class="modal-sub">—</div>
-      </div>
-      <div class="modal-actions">
-        <button id="favBtn" class="btn btn-ghost" title="Favoriet (F)">☆</button>
-        <button class="btn btn-ghost" data-close title="Sluiten (Esc)">✕</button>
+        <div class="brand-title">Schilderij Palette</div>
+        <div class="brand-sub">Klik een kaart voor details en palette.</div>
       </div>
     </div>
 
-    <div class="modal-body">
-      <div class="modal-left">
-        <div class="img-wrap">
-          <img id="modalImg" alt="" loading="lazy"/>
+    <div class="controls">
+      <div class="search">
+        <input id="q" type="search" placeholder="Zoek op titel, kunstenaar, tags…" autocomplete="off" />
+        <button id="clear" class="btn btn-ghost" title="Leegmaken">✕</button>
+        <button id="themeToggle" class="btn btn-ghost" title="Toggle theme">☀️ Light</button>
+      </div>
+
+      <div class="seg">
+        <button class="seg-btn is-active" data-sort="trending">Trending</button>
+        <button class="seg-btn" data-sort="newest">Nieuw</button>
+        <button class="seg-btn" data-sort="title">Titel</button>
+        <button class="seg-btn" data-sort="artist">Kunstenaar</button>
+      </div>
+
+      <div class="filters">
+        <label class="chk">
+          <input id="onlyFav" type="checkbox" />
+          <span>Alleen favorieten</span>
+        </label>
+        <label class="chk">
+          <input id="hiContrast" type="checkbox" />
+          <span>High contrast</span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- Sidebar bestaat nog voor JS compat, maar blijft verborgen -->
+    <aside class="sidebar">
+      <div class="panel">
+        <div class="panel-title">Stats</div>
+        <div class="panel-body">
+          <div class="stat">
+            <div class="stat-k">Kaarten</div>
+            <div class="stat-v" id="statCount">—</div>
+          </div>
+          <div class="stat">
+            <div class="stat-k">Favorieten</div>
+            <div class="stat-v" id="statFav">—</div>
+          </div>
+          <div class="stat">
+            <div class="stat-k">Laatste</div>
+            <div class="stat-v" id="statLast">—</div>
+          </div>
+
+          <!-- Export knoppen blijven bestaan maar zijn onzichtbaar -->
+          <button id="exportCssAll" class="export-hidden">Export CSS</button>
+          <button id="exportJsonAll" class="export-hidden">Export JSON</button>
+        </div>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div id="grid" class="grid" aria-live="polite"></div>
+
+      <div id="empty" class="empty hidden">
+        <div class="empty-title">Geen resultaten</div>
+        <div class="empty-sub">Pas je zoekterm of filters aan.</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close></div>
+
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <div id="modalTitle" class="modal-title">—</div>
+          <div id="modalSub" class="modal-sub">—</div>
         </div>
 
-        <div class="meta">
-          <div class="meta-row"><span>Jaar</span><span id="metaYear">—</span></div>
-          <div class="meta-row"><span>Bron</span><a id="metaLink" href="#" target="_blank" rel="noopener">open</a></div>
-          <div class="meta-row"><span>Tags</span><span id="metaTags">—</span></div>
+        <div class="modal-actions">
+          <button id="favBtn" class="btn btn-ghost" title="Favoriet (F)">☆</button>
+          <button class="btn btn-ghost" data-close title="Sluiten (Esc)">✕</button>
         </div>
       </div>
 
-      <div class="modal-right">
-        <div class="palette" id="modalPalette"></div>
+      <div class="modal-body">
+        <div class="modal-left">
+          <div class="img-wrap">
+            <img id="modalImg" alt="" loading="lazy" />
+          </div>
 
-        <!-- export/copy UI in modal ook weg -->
-        <div class="actions export-hidden">
-          <button id="copyCss" class="btn">Copy CSS vars</button>
-          <button id="copyJson" class="btn btn-ghost">Copy JSON</button>
-          <button id="downloadTxt" class="btn btn-ghost">Download .txt</button>
+          <div class="meta">
+            <div class="meta-row"><span>Jaar</span><span id="metaYear">—</span></div>
+            <div class="meta-row"><span>Bron</span><a id="metaLink" href="#" target="_blank" rel="noopener">open</a></div>
+            <div class="meta-row"><span>Tags</span><span id="metaTags">—</span></div>
+          </div>
         </div>
 
-        <!-- ids blijven bestaan voor JS compat, maar verborgen -->
-        <button id="copyCss" class="export-hidden">copyCss</button>
-        <button id="copyJson" class="export-hidden">copyJson</button>
-        <button id="downloadTxt" class="export-hidden">downloadTxt</button>
+        <div class="modal-right">
+          <div class="palette" id="modalPalette"></div>
 
-        <div class="toast" id="toast" aria-live="polite"></div>
+          <!-- Let op: géén dubbele ids meer -->
+          <div class="actions export-hidden">
+            <button id="copyCss" class="btn">Copy CSS vars</button>
+            <button id="copyJson" class="btn btn-ghost">Copy JSON</button>
+            <button id="downloadTxt" class="btn btn-ghost">Download .txt</button>
+          </div>
+
+          <div class="toast" id="toast" aria-live="polite"></div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<script type="module" src="./src/main.js"></script>
+  <!-- JS in de root -->
+  <script type="module" src="./main.js"></script>
 </body>
 </html>
